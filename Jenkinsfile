@@ -5,13 +5,7 @@ pipeline {
         AWS_DEFAULT_REGION = "us-west-2"
     }
     
-    stages {
-        stage("Code Checkout") {
-        steps {
-        git branch: 'main',
-            url: 'https://github.com/avtarOPS/hello-js.git'
-        }
- }        
+    stages {      
         stage('Sonarqube') {
             steps {
                 script{
