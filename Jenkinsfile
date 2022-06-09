@@ -12,7 +12,7 @@ pipeline {
                 scannerHome = tool 'Sonar';
                 }
                 withSonarQubeEnv('SonarQube') {
-                    sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=$BUILD_NUMBER "
+                    sh "${scannerHome}/bin/sonar-scanner -Dsonar.projectKey=$BUILD_NUMBER"
                 }
                 timeout(time: 10, unit: 'MINUTES') {
                     waitForQualityGate abortPipeline: true
