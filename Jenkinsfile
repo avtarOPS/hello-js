@@ -7,7 +7,7 @@ pipeline {
     
     stages {      
         stage('Sonarqube') {
-            steps {x
+            steps {
                 script{
                 scannerHome = tool 'Sonar';
                 }
